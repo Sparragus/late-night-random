@@ -14,6 +14,11 @@ export default class Slack {
     return channelList.channels.find((channel) => channel.name === name)
   }
 
+  async sendMessageToChannelByName (name, message, opts = {}) {
+    const channel = await this.getChannelByName(name)
+    return this.slack.chat.postMessage(channel.id, message, opts)
+  }
+
   async archiveChannelByName (name) {
     const channel = await this.getChannelByName(name)
     return this.slack.channels.archive(channel.id)

@@ -17,7 +17,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node -r babel-core/register -r babel-polyfill .",
+    "dev": "node -r babel-core/register -r babel-polyfill src",
     "clean": "rm -rf build",
     "build": "babel -d build src",
     "start": "node -r babel-polyfill ."
