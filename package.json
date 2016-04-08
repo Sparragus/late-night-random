@@ -20,7 +20,7 @@
     "dev": "node -r babel-core/register -r babel-polyfill src",
     "clean": "rm -rf build",
     "build": "babel -d build src",
-    "start": "node -r babel-polyfill ."
+    "start": "NODE_ENV=production node -r babel-polyfill ."
   },
   "standard": {
     "parser": "babel-eslint"
