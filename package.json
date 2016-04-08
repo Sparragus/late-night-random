@@ -2,7 +2,7 @@
   "name": "slack-bot-late-night-random",
   "description": "",
   "license": "MIT",
-  "main": "index.js",
+  "main": "build/index.js",
   "private": true,
   "keyword": [],
   "version": "0.0.0",
@@ -17,7 +17,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node -r babel-core/register -r babel-polyfill ."
+    "dev": "node -r babel-core/register -r babel-polyfill .",
+    "clean": "rm -rf build",
+    "build": "babel -d build src",
+    "start": "node -r babel-polyfill ."
   },
   "standard": {
     "parser": "babel-eslint"
