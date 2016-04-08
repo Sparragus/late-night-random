@@ -4,5 +4,6 @@
   },
   "channel_name": "latenightrandom",
   "opening_time": "23:00",
-  "closing_time": "06:00"
+  "closing_time": "06:00",
+  "timezone": "UTC"
 }
