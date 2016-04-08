@@ -1,6 +1,9 @@
+import 'babel-polyfill'
 import config from 'config'
 import { CronJob } from 'cron'
 import Slack from './slack'
+
+console.log('app running in ', process.env.NODE_ENV)
 
 const slack = new Slack(config.slack.token)
 

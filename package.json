@@ -17,10 +17,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node -r babel-core/register -r babel-polyfill src",
+    "dev": "node -r babel-core/register src",
     "clean": "rm -rf build",
     "build": "babel -d build src",
-    "start": "NODE_ENV=production node -r babel-polyfill ."
+    "start": "NODE_ENV=production pm2 start . --name 'late-night-random'"
   },
   "standard": {
     "parser": "babel-eslint"
