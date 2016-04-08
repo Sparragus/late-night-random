@@ -8,7 +8,7 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sparragus/slack-bot-late-night-random.git"
+    "url": "git+https://github.com/Sparragus/late-night-random.git"
   },
   "author": {
     "name": "Richard Kaufman",
@@ -32,9 +32,9 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/Sparragus/slack-bot-late-night-random/issues"
+    "url": "https://github.com/Sparragus/late-night-random/issues"
   },
-  "homepage": "https://github.com/Sparragus/slack-bot-late-night-random#readme",
+  "homepage": "https://github.com/Sparragus/late-night-random#readme",
   "dependencies": {
     "@slack/client": "^2.3.0",
     "config": "^1.20.0",
