@@ -10,6 +10,12 @@ function parseTime (time) {
   return { hour, minute }
 }
 
+const bot = {
+  username: 'donald-crockford',
+  as_user: false,
+  icon_url: 'https://d1n4bbuvjcnilu.cloudfront.net/attendeeimage/20131213212414-1124.jpg'
+}
+
 const openingTime = parseTime(config.opening_time)
 const openChannelJob = new CronJob({
   cronTime: `00 ${openingTime.minute} ${openingTime.hour} * * *`,
@@ -26,7 +32,9 @@ const openChannelJob = new CronJob({
       await slack.unarchiveChannelByName(config.channel_name)
     }
 
-    slack.sendMessageToChannelByName('random', '@here: #latenightrandom is open!', {parse: 'full'})
+    slack.sendMessageToChannelByName('random', '@here: #latenightrandom is open!', {parse: 'full', ...bot})
+    slack.sendMessageToChannelByName(config.channel_name, '#latenightrandom es un canal que abre de 11pm a 6am! Cuando cierra, borra todos los mensajes y no se puede usar hasta las 11pm.', {parse: 'full', ...bot})
+    slack.sendMessageToChannelByName(config.channel_name, 'Lo que pasa en #latenightrandom, se queda en #latenightrandom ;)', {parse: 'full', ...bot})
   },
   start: true,
   timeZone: config.timezone
