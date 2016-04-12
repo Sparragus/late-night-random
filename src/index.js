@@ -11,7 +11,7 @@ function parseTime (time) {
 }
 
 const bot = {
-  username: 'donald-crockford',
+  username: 'douglas-crockford',
   as_user: false,
   icon_url: 'https://d1n4bbuvjcnilu.cloudfront.net/attendeeimage/20131213212414-1124.jpg'
 }
