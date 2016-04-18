@@ -57,9 +57,7 @@ export default class Slack {
   }
 
   _sleep (ms) {
-    return new Promise((resolve, reject) => {
-      setTimeout(resolve, ms)
-    })
+    return new Promise((resolve) => setTimeout(resolve, ms))
   }
 
   async deleteAllMessagesFromChannelByName (name) {

@@ -5,5 +5,10 @@
   "channel_name": "latenightrandom",
   "opening_time": "23:00",
   "closing_time": "06:00",
-  "timezone": "UTC"
+  "timezone": "UTC",
+  "bot": {
+    "username": "conan-obrien",
+    "as_user": false,
+    "icon_url": "https://i.imgur.com/QfqzPBy.jpg"
+  }
 }
