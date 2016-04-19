@@ -1,0 +1,250 @@
+.sign {
+  display: inline-block;
+  padding: 20px 10px;
+  border-radius: 5px;
+  -webkit-filter: blur(0.75px);
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7), 0px 0px 0px 5px red, 0px 0px 0px 3px red inset, 0px 0px 0px rgba(255, 0, 0, 0.5), 0px 0px 0px rgba(255, 0, 0, 0.5) inset;
+}
+
+.sign > p {
+  font-family: avenir, sans-serif;
+  font-size: 30px;
+  line-height: 0px;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: #2b2b2b;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0px 10px 3px rgba(0, 0, 0, 0.2);
+}
+.sign > p:before {
+  content: "Open";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(43, 44, 45, 0.1);
+  text-shadow: 0px 0px 20px rgba(255, 51, 51, 0.7);
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: red;
+  -webkit-animation: flicker 20s linear infinite;
+  -moz-animation: flicker 20s linear infinite;
+  animation: flicker 20s linear infinite;
+}
+.sign > p:after {
+  content: "Open";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.8);
+  -webkit-animation: flicker 20s linear infinite;
+  -moz-animation: flicker 20s linear infinite;
+  animation: flicker 20s linear infinite;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  11% {
+    opacity: .4;
+  }
+  11.25% {
+    opacity: .6;
+  }
+  11.5% {
+    opacity: .4;
+  }
+  18% {
+    opacity: 1;
+  }
+  18.5% {
+    opacity: .9;
+  }
+  22% {
+    opacity: 1;
+  }
+  38.5% {
+    opacity: 1;
+  }
+  39% {
+    opacity: .8;
+  }
+  42% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.5% {
+    opacity: 0;
+  }
+  62% {
+    opacity: 0;
+  }
+  63% {
+    opacity: .2;
+  }
+  63.25% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  73% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .8;
+  }
+  79% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  11% {
+    opacity: .4;
+  }
+  11.25% {
+    opacity: .6;
+  }
+  11.5% {
+    opacity: .4;
+  }
+  18% {
+    opacity: 1;
+  }
+  18.5% {
+    opacity: .9;
+  }
+  22% {
+    opacity: 1;
+  }
+  38.5% {
+    opacity: 1;
+  }
+  39% {
+    opacity: .8;
+  }
+  42% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.5% {
+    opacity: 0;
+  }
+  62% {
+    opacity: 0;
+  }
+  63% {
+    opacity: .2;
+  }
+  63.25% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  73% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .8;
+  }
+  79% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  11% {
+    opacity: .4;
+  }
+  11.25% {
+    opacity: .6;
+  }
+  11.5% {
+    opacity: .4;
+  }
+  18% {
+    opacity: 1;
+  }
+  18.5% {
+    opacity: .9;
+  }
+  22% {
+    opacity: 1;
+  }
+  38.5% {
+    opacity: 1;
+  }
+  39% {
+    opacity: .8;
+  }
+  42% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.5% {
+    opacity: 0;
+  }
+  62% {
+    opacity: 0;
+  }
+  63% {
+    opacity: .2;
+  }
+  63.25% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  73% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .8;
+  }
+  79% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -2,6 +2,11 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 .container {
+  // background-color: #2b303b;
+  // background-image: url("../video/City-Nights/Snapshots/City-Nights.jpg");
+  // background-image: url("../img/bg-1.jpg");
+  // background-size: cover;
+  color: #ffffff;
   // display: flex;
   // flex-flow: column nowrap;
 }
@@ -14,22 +19,31 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   height: 100vh;
 }
 
+.slide-background {
+  position: absolute;
+  z-index: -1;
+  // width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.slide-background > img {
+  
+}
+
 .slide-header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;  
 
-  height: 60px;
+  height: 80px;
   margin: 0 2.5%;
 }
 
-.neon-sign {
-}
-
 .social img {
-  width: 47px;
-  height: 47px;
+  width: 32px;
+  height: 32px;
 
   border-radius: 50%;
 }
@@ -42,15 +56,41 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 .slide-content > h1 {
-  font-size: 72px;
-  font-family: 'Kaushan Script'
+  color: rgba(0,0,0,0.8);
+
+  font-size: 112px;
+  font-family: 'Kaushan Script';
+  // animation: neon 1.5s ease-in-out infinite alternate;
+  text-shadow: -1px -1px 3px #ff1443, 1px -1px 3px #ff1443, -1px 1px 3px #ff1443, 1px 1px 3px #ff1443, 0 0 1px #fff, 0 0 20px #FF1177, 0 0 30px #FF1177;//, 0 0 70px #FF1177;//, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+
+  padding: 40px 0;
 }
 
 .slide-content > h2 {
   font-size: 32px;
+  font-family: 'Carter One';
+
+  margin-bottom: 50px;
+}
+
+.slide-content > p {
+  width: 50%;
+
+  font-size: 20px;
+  font-family: 'Carter One';
+  line-height: 1.2em;
 }
 
 .next-slide {
   align-self: center;
   padding-bottom: 5px;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
 }
