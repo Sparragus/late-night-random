@@ -1,7 +1,11 @@
 {
   "slack": {
-    "token": "TOKEN"
+    "token": "TOKEN",
+    "client_id": "CLIENT_ID",
+    "client_secret": "CLIENT_SECRET"
   },
+  "port": 3000,
+  "cookie_secrets": ["SECRET"],
   "channel_name": "latenightrandom",
   "opening_time": "23:00",
   "closing_time": "06:00",
