@@ -21,7 +21,7 @@ function requestAccessToken (code) {
         code
       }
     }, function (err, res, body) {
-      err ? reject(err) : resolve(body)
+      err ? reject(err) : resolve(JSON.parse(body))
     })
   })
 }
