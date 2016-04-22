@@ -3,15 +3,15 @@ import compose from 'koa-compose'
 
 import oauth from './oauth'
 import home from './home'
-import * as preferences from './preferences'
+import * as settings from './settings'
 
 export default function () {
   const router = new Router()
 
   router.get('/', home)
   router.get('/oauth', oauth)
-  router.get('/preferences', preferences.get)
-  router.post('/preferences', preferences.update)
+  router.get('/settings', settings.get)
+  router.post('/settings', settings.update)
 
   return compose([
     router.routes(),

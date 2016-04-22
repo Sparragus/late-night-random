@@ -1,15 +1,8 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends './layout.html' %}
 
-  <title>#LateNightRandom</title>
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Carter+One' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./assets/css/opensign.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+{% block title %}#LateNightRandom{% endblock title %}
+
+{% block content %}
   <div class="container">
     <div class="slide">
       <div class="slide-background">
@@ -43,5 +36,4 @@
     </div>
   </div>
   <script src='./assets/js/opensign.js'></script>
-</body>
-</html>
+{% endblock content %}

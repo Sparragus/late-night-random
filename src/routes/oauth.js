@@ -8,7 +8,7 @@ export default async function (ctx, next) {
   ctx.assert(accessToken.ok, 500, 'Error getting Slack accessToken.')
 
   ctx.session.accessToken = accessToken
-  ctx.redirect('/preferences')
+  ctx.redirect('/settings')
 }
 
 function requestAccessToken (code) {
