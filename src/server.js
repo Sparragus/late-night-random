@@ -12,6 +12,19 @@ import publicFiles from 'koa-static'
 
 import routes from './routes'
 
+import mongoose from 'mongoose'
+
+// Configure Database
+mongoose
+  .connect(config.mongodb.uri, config.mongodb.options)
+  .connection
+  .once('open', () => console.log(`MongoDB up and running at ${config.mongodb.uri}`))
+  .on('error', (err) => {
+    console.error(`Cannot connect to MongoDB: ${err.message}`)
+    throw err
+  })
+  .on('close', () => console.log('Lost connection to MongoDB'))
+
 const app = new Koa()
 
 if (process.env.NODE_ENV === 'development') {
