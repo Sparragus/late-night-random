@@ -1,3 +1,7 @@
 export default async function home (ctx, next) {
-  await ctx.render('index')
+  const locals = {
+    appInstalled: !!ctx.session.accessToken
+  }
+
+  await ctx.render('index', locals)
 }
