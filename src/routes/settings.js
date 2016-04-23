@@ -1,5 +1,5 @@
-export function get (ctx, next) {
-  ctx.render('preferences', {})
+export async function get (ctx, next) {
+  await ctx.render('settings', {})
 }
 
 export function update (ctx, next) {

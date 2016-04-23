@@ -4,4 +4,14 @@
 
 {% block content %}
   <h1>Settings</h1>
+  <form action="./settings" method="post">
+    <div class="form-group">
+      <label for="timezone">Timezone</label>
+      <select class="form-control" id="timezone" name="timezone">
+        <option value="" selected>Select your timezone:</option>
+        {% include "./partials/timezone-options.html" %}
+      </select>
+    </div>
+    <button type="submit">Save</button>
+  </form>
 {% endblock content %}
