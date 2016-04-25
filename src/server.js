@@ -6,6 +6,7 @@ import Koa from 'koa'
 
 import convert from 'koa-convert'
 import logger from 'koa-logger'
+import bodyParser from 'koa-bodyparser'
 import session from 'koa-session'
 import views from 'koa-views'
 import publicFiles from 'koa-static'
@@ -48,6 +49,7 @@ app.use(views(viewsPath, {
   }
 }))
 
+app.use(bodyParser())
 app.use(routes())
 app.listen(config.port, () => {
   console.log(`Server listening at port ${config.port}`)
