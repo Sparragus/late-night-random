@@ -11,8 +11,14 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  {% block content %}{% endblock content %}
+  {% block flashMessages %}
+    {% if flash %}
+      <div class="flash {{flash.type}}">{{flash.text}}</div>
+    {% endif %}
+  {% endblock %}
 
-  {% block googleAnalytics %}{% endblock googleAnalytics %}
+  {% block content %}{% endblock %}
+
+  {% block googleAnalytics %}{% endblock %}
 </body>
 </html>

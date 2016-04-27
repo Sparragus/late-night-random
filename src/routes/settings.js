@@ -6,9 +6,13 @@ export async function get (ctx, next) {
     return ctx.redirect('/')
   }
 
+  const flash = {...ctx.session.flash}
+  ctx.session.flash = {}
+
   const team = await Team.findOne({id: ctx.session.teamId}).exec()
   await ctx.render('settings', {
-    timezone: team.timezone
+    timezone: team.timezone,
+    flash
   })
 }
 
@@ -29,6 +33,11 @@ export async function update (ctx, next) {
         new: true
       }
     ).exec()
+  }
+
+  ctx.session.flash = {
+    type: 'success',
+    text: 'Timezone updated'
   }
 
   return ctx.redirect('/settings')
