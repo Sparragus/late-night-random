@@ -24,6 +24,11 @@ export default async function (ctx, next) {
   ).exec()
 
   ctx.session.teamId = team.id
+  ctx.session.flash = {
+    type: 'success',
+    text: 'Integration installed succesfully'
+  }
+
   ctx.redirect('/settings')
 }
 
