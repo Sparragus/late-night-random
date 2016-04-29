@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import config from 'config'
 import path from 'path'
 
@@ -51,6 +50,5 @@ app.use(views(viewsPath, {
 
 app.use(bodyParser())
 app.use(routes())
-app.listen(config.port, () => {
-  console.log(`Server listening at port ${config.port}`)
-})
+
+export default app

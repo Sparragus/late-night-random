@@ -16,10 +16,11 @@
     "url": "http://richardkaufman.org"
   },
   "scripts": {
-    "dev": "node -r babel-core/register src",
-    "clean": "rm -rf build",
-    "build": "babel -d build src",
-    "dev:server": "NODE_ENV=development node -r babel-core/register ./src/server.js",
+    "test": "node -r babel-core/register ./test",
+    "dev": "node -r babel-core/register ./src",
+    "clean": "rm -rf ./build",
+    "build": "babel -d build ./src",
+    "dev:server": "NODE_ENV=development node -r babel-core/register ./src",
     "watch:server": "nodemon -w . -x 'npm run dev:server'",
     "start": "NODE_ENV=production pm2 start . --name 'late-night-random'"
   },
@@ -49,6 +50,8 @@
     "koa-session": "^3.3.1",
     "koa-static": "^3.0.0",
     "koa-views": "^5.0.1",
+    "moment": "^2.13.0",
+    "moment-timezone": "^0.5.3",
     "mongoose": "^4.4.13",
     "request": "^2.72.0",
     "swig": "^1.4.2"
