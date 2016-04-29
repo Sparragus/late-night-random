@@ -85,7 +85,7 @@ async function openOrCloseChannels () {
   })
 }
 
-const EVERY_FIFTEEN_MINUTES = '30 */1 * * * *'
+const EVERY_FIFTEEN_MINUTES = '00 */15 * * * *'
 const openOrCloseChannelsJob = new CronJob({
   cronTime: EVERY_FIFTEEN_MINUTES,
   onTick: openOrCloseChannels,

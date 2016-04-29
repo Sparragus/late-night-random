@@ -3,15 +3,21 @@
 {% block title %}#LateNightRandom | Settings{% endblock title %}
 
 {% block content %}
-  <h1>Settings</h1>
-  <form action="./settings" method="post">
-    <div class="form-group">
-      <label for="timezone">Timezone</label>
-      <select class="form-control" id="timezone" name="timezone">
+<div class="settings">
+  <div class="row">
+    <h1>Timezone</h1>
+  </div>
+  <div class="row">
+    <h2>Set this and you're good to go!</h2>
+  </div>
+  <div class="row">
+    <form action="./settings" method="post">
+      <select class="form-control fullwidth" id="timezone" name="timezone">
         <option value="" selected>Select your timezone:</option>
         {% include "./partials/timezone-options.html" %}
       </select>
-    </div>
-    <button type="submit">Save</button>
-  </form>
+      <button class="fullwidth" type="submit">Save</button>
+    </form>
+  </div>
+</div>
 {% endblock content %}
