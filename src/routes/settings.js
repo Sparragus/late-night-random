@@ -3,6 +3,11 @@ import Team from '../models/team'
 export async function get (ctx, next) {
   if (!ctx.session || !ctx.session.teamId) {
     // TODO: Error flash message
+    ctx.session.flash = {
+      type: 'error',
+      text: 'You need to log in.'
+    }
+
     return ctx.redirect('/')
   }
 
@@ -19,6 +24,10 @@ export async function get (ctx, next) {
 export async function update (ctx, next) {
   if (!ctx.session || !ctx.session.teamId) {
     // TODO: Error flash message
+    ctx.session.flash = {
+      type: 'error',
+      text: 'You need to log in.'
+    }
     return ctx.redirect('/')
   }
 
