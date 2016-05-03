@@ -13,7 +13,9 @@
 <body>
   {% block flashMessages %}
     {% if flash %}
+    <div class="flash-container">
       <div class="flash {{flash.type}}">{{flash.text}}</div>
+    </div>
     {% endif %}
   {% endblock %}
 

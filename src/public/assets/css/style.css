@@ -109,3 +109,25 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 form > .fullwidth {
   width: 100%;
 }
+
+.flash-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+
+  position: absolute;
+  top: 10px;
+}
+
+.flash.error {
+  box-sizing: border-box;
+
+  border: 3px solid darkred;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.9);
+
+  padding: 20px;
+}
